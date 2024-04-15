@@ -24,6 +24,7 @@
 	},
 	"type": "module",
 	"dependencies": {
+		"jsdom": "^24.0.0",
 		"vidstack": "^1.11.17"
 	}
 }
