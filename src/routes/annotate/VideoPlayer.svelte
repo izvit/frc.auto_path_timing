@@ -14,14 +14,9 @@
     var mediaRecorder;
     
 
-    $: if (videoPlayer) {
-        currTime = videoPlayer.currentTime
-        console.log("Updating time: " + currTime)
-    }
-
     function loadVideo (base64String){
-        console.info("Loading video")
-        videoPlayer.src = "data:video/webm;" + base64String.substring(36)
+        let dataStartInd = base64String.indexOf("base64") //Remove codec info (unsupported)
+        videoPlayer.src = {src: "data:video/webm;" + base64String.substring(dataStartInd), type: "video/webm"} 
     }
     
     // stop both mic and camera
@@ -84,6 +79,12 @@
 
     function register () {
 
+        //-- Register listner for time updates
+        videoPlayer.addEventListener('time-update', () => {
+                currTime=videoPlayer.currentTime
+            });
+
+        //-- Register listner for record event
         controlButton.addEventListener('click', async () => {
             if(viewing==true){
                 const stream = await navigator.mediaDevices.getUserMedia({ 
@@ -111,13 +112,8 @@
                     //Only necessaary for base64
                     reader.onloadend = function() {
                         $autoVideoBase64 = reader.result;
+                        loadVideo(reader.result)
                     }       
-                    
-                    if (event.data.size>0) {
-                        console.info("size: " + event.data.size)
-                        videoPlayer.src = URL.createObjectURL(event.data) 
-                    }
-                    videoPlayer.playbackRate=playbackRateSelect.value
                 })
 
             }
@@ -133,34 +129,32 @@
     }
 
     onMount(() => {
+
+            //Load existing video if it has already been captured
             if ($autoVideoBase64.length>0) {
                 loadVideo($autoVideoBase64)
             }
-            else {
-                videoPlayer.src = "images/match.mp4"
-            }
 
+            //Set default playback rate
             videoPlayer.playbackRate = 0.5
+
+            //Register callbacks
             register()
         }
     )
 
 
-
 </script>
 
 
-   
 <div class="h-fit w-auto flex flex-col rounded-lg overflow-hidden bg-black shadow">
-    <!-- card cover -->
-    <!-- <img class="h-56 w-full object-cover" src="https://images.unsplash.com/photo-1514897575457-c4db467cf78e?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=384" alt="" /> -->
-    <video class="object-cover"  muted bind:this={videoLive}  class:viewing></video>
-    <!-- <video class="object-cover" controls  bind:this={videoRecorded} bind:currentTime={currTime} class:recording></video> -->
-    
-    <media-player bind:this={videoPlayer} title="YouTube Test2"  class:recording src="https://www.youtube.com/watch?v=ccuOVdf08JA">
+    <!-- card cover -->   
+    <media-player bind:this={videoPlayer} class:recording title="Viewer">
         <media-provider></media-provider>
         <media-video-layout></media-video-layout>
     </media-player>
+
+    <video class="object-cover"  class:viewing muted bind:this={videoLive} ></video>
     <!-- end card cover -->
 
     <!-- card footer -->
