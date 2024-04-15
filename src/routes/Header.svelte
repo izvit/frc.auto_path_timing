@@ -16,8 +16,8 @@
 			<path d="M0,0 L1,2 C1.5,3 1.5,3 2,3 L2,0 Z" />
 		</svg>
 		<ul>
-			<li aria-current={$page.url.pathname === '/config' ? 'page' : undefined}>
-				<a href="/config">[Configure]</a>
+			<li aria-current={$page.url.pathname === '/explore' ? 'page' : undefined}>
+				<a href="/explore">[Match Explorer]</a>
 			</li>
 			<li aria-current={$page.url.pathname === '/annotate' ? 'page' : undefined}>
 				<a href="/annotate">[Video Annotation]</a>

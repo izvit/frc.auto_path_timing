@@ -7,7 +7,7 @@
     let controlButton;
     let playbackRateSelect;
     let videoLive;
-    let videoPlayer
+    let player
     let recording=false
     let viewing=true
 
@@ -16,7 +16,7 @@
 
     function loadVideo (base64String){
         let dataStartInd = base64String.indexOf("base64") //Remove codec info (unsupported)
-        videoPlayer.src = {src: "data:video/webm;" + base64String.substring(dataStartInd), type: "video/webm"} 
+        player.src = {src: "data:video/webm;" + base64String.substring(dataStartInd), type: "video/webm"} 
     }
     
     // stop both mic and camera
@@ -30,25 +30,31 @@
 
     export function nudgeVideo(step)
     {
-        videoPlayer.currentTime = videoPlayer.currentTime + step; 
-        console.log("nudge: currTime: " + videoPlayer.currentTime)
+        if(player.currentTime)
+            player.currentTime = player.currentTime + step; 
+        console.log("nudge: currTime: " + player.currentTime)
     }
 
     export function pausePlay()
     {
-        videoPlayer.pause(); 
-        console.log("pause: curTime: " + videoPlayer.currentTime)
+        player.pause(); 
+        console.log("pause: curTime: " + player.currentTime)
     }
 
     export function continuePlay()
     {
-        if(!videoPlayer.ended) 
-            videoPlayer.play()
+        if(!player.ended) 
+            player.play()
     }
 
     export function getCurrTime()
     {
-        return videoPlayer.currentTime
+        return player.currentTime
+    }
+
+    export function getDuration()
+    {
+        return player.duration
     }
 
     function handleKeys(event) 
@@ -80,13 +86,18 @@
     function register () {
 
         //-- Register listner for time updates
-        videoPlayer.addEventListener('time-update', () => {
-                currTime=videoPlayer.currentTime
+        player.addEventListener('time-update', () => {
+                console.log("player: updating time to " + player.currentTime + "prev: " + currTime)
+                currTime=player.currentTime
             });
 
         //-- Register listner for record event
         controlButton.addEventListener('click', async () => {
             if(viewing==true){
+                //Stop player if playing
+                player.pause()
+
+                //Get camera stream
                 const stream = await navigator.mediaDevices.getUserMedia({ 
                                 video: { frameRate: { ideal: 10 } },
                                 audio: true,
@@ -97,7 +108,8 @@
                 if (!MediaRecorder.isTypeSupported('video/webm')) { 
                     console.warn('video/webm is not supported')
                     }
-            
+
+                //Create recorder and start recording
                 mediaRecorder = new MediaRecorder(stream, { 
                                                     mimeType: 'video/webm',
                                                     })
@@ -106,6 +118,7 @@
                 videoLive.play()
                 mediaRecorder.start()
 
+                //Add listner to create base64 string of video when done
                 mediaRecorder.addEventListener('dataavailable', event => {   
                     var reader = new FileReader();
                     reader.readAsDataURL(event.data); 
@@ -136,7 +149,7 @@
             }
 
             //Set default playback rate
-            videoPlayer.playbackRate = 0.5
+            player.playbackRate = 0.5
 
             //Register callbacks
             register()
@@ -149,7 +162,7 @@
 
 <div class="h-fit w-auto flex flex-col rounded-lg overflow-hidden bg-black shadow">
     <!-- card cover -->   
-    <media-player bind:this={videoPlayer} class:recording title="Viewer">
+    <media-player bind:this={player} class:recording title="Viewer">
         <media-provider></media-provider>
         <media-video-layout></media-video-layout>
     </media-player>
@@ -163,7 +176,7 @@
             Playback Speed
         </div>
         <div class="col-span-2">
-            <select  bind:this={playbackRateSelect} on:change={()=>{videoPlayer.playbackRate=playbackRateSelect.value}}>
+            <select  bind:this={playbackRateSelect} on:change={()=>{player.playbackRate=playbackRateSelect.value}}>
             <option value="0.5"  selected="selected">0.5x</option>
             <option value="1.0">1.0x</option>
             <option value="1.5">1.5x</option>

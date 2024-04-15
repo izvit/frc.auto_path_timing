@@ -13,6 +13,7 @@
     export let alliance = AllianceColor.blue
     export let canvasSize={w:610, h:470}
     export let timeFn = () => null
+    export let durationFn = () => null
 
     //-- Component-specific variables
       let canvas;
@@ -42,6 +43,8 @@
         canvas.addEventListener("touchmove", touchMoveHandler);   
         canvas.addEventListener("touchend", touchEndHandler);
         loaded = true
+
+        console.log("Start at load:" + $videoMatch.StartTime)
       });
       
     
@@ -98,18 +101,21 @@
   
         /**
          * Add point to the event queue (TODO: refactor to handler class with callbacks)
-         * @param  {[GameEventType] e }
+         * @param  {[events.GameEventType] e }
          */
         function addGameEvent(e) {
             
+          console.log("Start time game event:" + $videoMatch.StartTime + " checkingTime: " + timeFn())
           if(currEvent==null && e.name!=events.GameEventType.init){
                 console.log("Unexpected event (" + e.name + "). Expecting init event.")
                 return
           }
 
           //-- Handle time information
-            let currTime =  timeFn() 
-            if(currTime!=null)
+            let currTime = timeFn() 
+            let duration = durationFn()
+            console.log("currTime: " + currTime + " duration: " + duration)
+            if(currTime !== null && duration!==null && duration > 0)
             {
               let startTime = $videoMatch.StartTime
 
@@ -282,7 +288,7 @@
         contextMenu = new ContextMenu(ctx, pos, nitems)
         
         //-- Proposed
-        contextMenu.addItem(new ContextMenuItem(() => {addGameEvent(new events.PickupEvent(pos))}, Colors.darkorange, null, shape))
+        contextMenu.addItem(new ContextMenuItem(() => {addGameEvent(new events.PickupEvent(pos))}, Colors.orange, null, shape))
         contextMenu.addItem(new ContextMenuItem(() => {addGameEvent(new events.SpeakerScoreEvent(pos))}, Colors.green, null, shape))
         contextMenu.addItem(new ContextMenuItem(() => {addGameEvent(new events.DropEvent(pos))}, Colors.black, null, shape))
         contextMenu.addItem(new ContextMenuItem(() => { addGameEvent(new events.PickupEvent(pos)); 
@@ -395,7 +401,7 @@
                     ctx.stroke();
                   },
         "pickup" : (e)=> {
-                      drawCircle(ctx, e.pos, Colors.orange, 10);
+                      drawCircle(ctx, e.pos, Colors.orange, 10, Colors.darkorange);
                   },
         "failPickup" : (e)=> {
                       drawCircle(ctx, e.pos, Colors.orange, 10, Colors.black);
@@ -469,15 +475,15 @@
 
   </style>
   
-<main>
-    <div>
-        <canvas 
-        bind:this={canvas}
-        class:blue_bg={alliance === "blue"}
-        class:red_bg={alliance === "red"}
-        width={canvasSize.w}
-        height={canvasSize.h}
-        />
-    </div>
-</main>
+
+  <div class="flex justify-center">
+      <canvas 
+      bind:this={canvas}
+      class:blue_bg={alliance === "blue"}
+      class:red_bg={alliance === "red"}
+      width={canvasSize.w}
+      height={canvasSize.h}
+      />
+  </div>
+
   
