@@ -3,6 +3,7 @@
     import Player from "./Player.svelte";
     import { gameData, autoEventList, videoMatch } from "../stores"
     import { onMount } from "svelte";
+    import VideoPlayer from "./VideoPlayer.svelte";
   
     let fieldPath
     let videoPlayer
@@ -25,11 +26,6 @@
 	<meta name="description" content="Video Annotation" />
 </svelte:head>
 
-<!-- <div class="grid grid-column">
-  <FieldPathAuto />
-
-</div> -->
-
 <style>
   .inactive {
       background-color: #999999;
@@ -51,12 +47,13 @@
               >BLUE</button
           >
       </div>
-      {#await import('./Player.svelte') then {default: Player}}
-      <svelte:component this={Player} />
-      {/await}
+      <!-- {#await import('./Player.svelte') then {default: Player}}
+      <svelte:component this={Player} bind:this={videoPlayer}/>
+      {/await} -->
+      <VideoPlayer bind:this={videoPlayer} bind:currTime={time}/>
   </div>
   <div class="flex-1 bg-black p-4">
-      <span class="text-center w-full"> <b>time: </b> [start: {startTime}, cur: {(time==null) ? "n/a" : time}]</span>
+      <span class="text-center w-full text-white"> <b>time: </b> [start: {startTime}, cur: {(time==null) ? "n/a" : time}]</span>
       <FieldPathAuto  bind:this={fieldPath} bind:timeFn={timeFn} alliance={alliance} canvasSize={{w:510, h:380}}/>
 
       <div class="grid grid-cols-1">

@@ -1,5 +1,12 @@
 <script>
 import 'vidstack/bundle';
+
+let videoPlayer;
+
+export function getCurrTime(){
+    return videoPlayer.currentTime
+}
+
 </script>
 
 <!-- <media-player title="General Test" src="https://files.vidstack.io/sprite-fight/720p.mp4">
@@ -16,7 +23,9 @@ import 'vidstack/bundle';
     <media-provider></media-provider>
     <media-video-layout></media-video-layout>
 </media-player> -->
-<media-player title="YouTube Test2" src="https://www.youtube.com/watch?v=ccuOVdf08JA">
+
+
+<media-player bind:this={videoPlayer} title="YouTube Test2" src="https://www.youtube.com/watch?v=ccuOVdf08JA">
     <media-provider></media-provider>
     <media-video-layout></media-video-layout>
 </media-player>
