@@ -17,7 +17,7 @@
 		</svg>
 		<ul>
 			<li aria-current={$page.url.pathname === '/explore' ? 'page' : undefined}>
-				<a href="/explore">[Match Explorer]</a>
+				<a href="/explore">[Blue Alliance]</a>
 			</li>
 			<li aria-current={$page.url.pathname === '/annotate' ? 'page' : undefined}>
 				<a href="/annotate">[Video Annotation]</a>
