@@ -14,6 +14,7 @@
     var mediaRecorder;
     
     export function loadRemoteVideo(src){
+        console.info("Loading remote video: " + src)
         player.src = src
     }
 
@@ -127,6 +128,7 @@
                     reader.readAsDataURL(event.data); 
                     //Only necessaary for base64
                     reader.onloadend = function() {
+                        console.info("Loading recorded video")
                         $autoVideoBase64 = reader.result;
                         loadVideo(reader.result)
                     }       
@@ -134,11 +136,12 @@
 
             }
             else {
+                console.info("Stopping video")
                 recording=false
                 viewing=true
                 videoLive.pause()
-                stopBothVideoAndAudio(videoLive.srcObject)
                 mediaRecorder.stop()
+                stopBothVideoAndAudio(videoLive.srcObject)
             }
             }) 
         
