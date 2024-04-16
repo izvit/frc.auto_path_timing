@@ -1,11 +1,37 @@
 <script>
 	import { onMount } from "svelte";
+	import { matchSelect } from "../stores"
 	
 	let resp;
-	let rows;
+	let matchInfo;
+	let eventName;
+	let teamNumber;
+	let teams = new Set();
+	let teamSorted;
 
-	$: if(resp) rows = resp
+	$: teamSorted =  Array.from(teams).sort()
+	$: if(resp) {
+		matchInfo = resp
+	}
+ 
+	async function fetchEventData() {
+		let response = await fetch('/data/events/event_' + eventName +'.json')
+		resp = await response.json()
 
+		for (const [key, value] of Object.entries(resp.quals)) {
+			for ( let t of value["red"] )
+				teams.add(Number(t))
+			for ( let t of value["blue"] )
+				teams.add(Number(t))
+		}
+		console.log("teams: " + teams.size)
+		console.log(resp)
+		teams=teams;
+	}
+
+	onMount(async () => {
+		fetchEventData()
+	})
 
 </script>
 <svelte:head>
@@ -13,67 +39,44 @@
 	<meta name="description" content="Match Explorer" />
 </svelte:head>
 
-<input
-	type="text"
-	value="2023hop"
-	on:keydown={async (e) => {
-		if (e.key !== 'Enter') return;
+<div class="flex justify-center w-full m-5 space-x-2">
+	<select class="p-2" bind:value={eventName} on:change={fetchEventData}>
+		<option value="2023hop">Houston (2023 Hopper)</option>
+	</select>
+	<!-- <select class="p-2" bind:value={teamNumber} >
+		{#each teamSorted as t}
+			<option value="{t}">{t}</option>
+		{/each}
+	</select> -->
+</div>
 
-		const input = e.currentTarget;
-		const eventName = input.value;
-
-		let response = await fetch('/api/bluealliance', {
-			method: 'POST',
-			body: JSON.stringify({ eventName }),
-			headers: {
-				'Content-Type': 'application/json'
-			}
-		});
-
-		resp = await response.json()
-		console.log(resp)
-		input.value = ''
-	}}
-/>
-
-
-{#if (rows!=null)}
-	<table class="bg-white">
+{#if (matchInfo!=null)}
+	<table class="bg-white md:w-[60%] mx-auto text-center">
 		<thead>
 			<tr>
-				<th>Video</th>
-				<th>Team0</th>
-				<th>Team1</th>
-				<th>Team2</th>
-				<th>Team0</th>
-				<th>Team1</th>
-				<th>Team2</th>
+				<th>Match</th>
+				<th>Red</th>
+				<th>Blue</th>
+				<th>Videos</th>		
 			</tr>
 		</thead>
 		<tbody>
-			{#each rows as {videoUrl, red0, red1, red2, blue0, blue1, blue2}}
-				<tr>
+			{#each Object.entries(matchInfo["quals"]) as [key, value], i}
+				<tr class="{(i%2==0)? "bg-slate-200" : "bg-white" }">
 					<td>
-						<a href="{videoUrl}" class="font-medium text-yellow-600 dark:text-yellow-500 hover:underline">Video</a>
+						Q{key}
 					</td>
 					<td>
-						<a href="{red0.uri}" class="font-medium text-red-600 dark:text-red-500 hover:underline">{red0.number}</a>
+						{value["red"]}
 					</td>
 					<td>
-						<a href="{red1.uri}" class="font-medium text-red-600 dark:text-red-500 hover:underline">{red1.number}</a>
+						{value["blue"]}
 					</td>
-					<td>
-						<a href="{red2.uri}" class="font-medium text-red-600 dark:text-red-500 hover:underline">{red2.number}</a>
+					<td class="flex-1">
+						{#each value["videos"] as v}
+							<a href="/annotate" on:mousedown={()=>$matchSelect["videoUrl"]=v}>Link</a>
+						{/each}
 					</td>
-					<td>
-						<a href="{blue0.uri}" class="font-medium text-blue-600 dark:text-blue-500 hover:underline">{blue0.number}</a>
-					</td>
-					<td>
-						<a href="{blue1.uri}" class="font-medium text-blue-600 dark:text-blue-500 hover:underline">{blue0.number}</a>
-					</td>	
-					<td>
-						<a href="{blue2.uri}" class="font-medium text-blue-600 dark:text-blue-500 hover:underline">{blue0.number}</a>
-					</td>						
 				</tr>
 			{/each}
 		</tbody>

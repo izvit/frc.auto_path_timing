@@ -3,6 +3,13 @@ import { writable } from 'svelte/store';
  //-- Stores
  export const autoVideoBase64 = writable("")
  export const autoEventList = writable([])
+ export const matchSelect = writable ({
+    "eventName" : null,
+    "id" : null,
+    "videoUrl" : null,
+ }
+ )
+
  export const gameData = writable({
      AllianceColor: 0,
      ReversedAlliance: 0,

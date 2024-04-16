@@ -1,7 +1,7 @@
 <script>
     import FieldPathAuto from "./FieldPathAuto.svelte";
     import Player from "./Player.svelte";
-    import { gameData, autoEventList, videoMatch } from "../stores"
+    import { gameData, autoEventList, videoMatch, matchSelect } from "../stores"
     import { onMount } from "svelte";
     import VideoPlayer from "./VideoPlayer.svelte";
   
@@ -19,6 +19,9 @@
     onMount(() => {
             timeFn = videoPlayer.getCurrTime
             durationFn = videoPlayer.getDuration
+            if ($matchSelect !== null ) {
+                videoPlayer.loadRemoteVideo($matchSelect["videoUrl"])
+            }
         }
     )
 

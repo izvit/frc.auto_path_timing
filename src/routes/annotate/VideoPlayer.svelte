@@ -13,6 +13,9 @@
 
     var mediaRecorder;
     
+    export function loadRemoteVideo(src){
+        player.src = src
+    }
 
     function loadVideo (base64String){
         let dataStartInd = base64String.indexOf("base64") //Remove codec info (unsupported)

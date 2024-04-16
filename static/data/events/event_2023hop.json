@@ -1,0 +1,1941 @@
+{
+   "quals": {
+      "1": {
+         "red": [
+            6357,
+            9182,
+            610
+         ],
+         "blue": [
+            6429,
+            1706,
+            1986
+         ],
+         "videos": [
+            "https://www.youtube.com/v/s_4iWXCsz9c"
+         ]
+      },
+      "2": {
+         "red": [
+            2609,
+            8019,
+            7457
+         ],
+         "blue": [
+            2052,
+            9082,
+            3654
+         ],
+         "videos": [
+            "https://www.youtube.com/v/QZYlosX5tFQ"
+         ]
+      },
+      "3": {
+         "red": [
+            353,
+            2718,
+            772
+         ],
+         "blue": [
+            2481,
+            6024,
+            696
+         ],
+         "videos": [
+            "https://www.youtube.com/v/Br8Hpl3k2X0"
+         ]
+      },
+      "4": {
+         "red": [
+            190,
+            9202,
+            6721
+         ],
+         "blue": [
+            1323,
+            488,
+            2341
+         ],
+         "videos": [
+            "https://www.youtube.com/v/5rS0tev4dXM"
+         ]
+      },
+      "5": {
+         "red": [
+            1987,
+            2930,
+            68
+         ],
+         "blue": [
+            1311,
+            5526,
+            2169
+         ],
+         "videos": [
+            "https://www.youtube.com/v/6PMyLKjXrkQ"
+         ]
+      },
+      "6": {
+         "red": [
+            1727,
+            2096,
+            4336
+         ],
+         "blue": [
+            4682,
+            5648,
+            4930
+         ],
+         "videos": [
+            "https://www.youtube.com/v/nq1rf-5Vo_A"
+         ]
+      },
+      "7": {
+         "red": [
+            1792,
+            201,
+            876
+         ],
+         "blue": [
+            4450,
+            6517,
+            4135
+         ],
+         "videos": [
+            "https://www.youtube.com/v/gc6K8hPfA8Y"
+         ]
+      },
+      "8": {
+         "red": [
+            9260,
+            573,
+            1796
+         ],
+         "blue": [
+            999,
+            3189,
+            498
+         ],
+         "videos": [
+            "https://www.youtube.com/v/MtUV7AV5IYY"
+         ]
+      },
+      "9": {
+         "red": [
+            245,
+            2338,
+            1807
+         ],
+         "blue": [
+            5667,
+            1799,
+            5816
+         ],
+         "videos": [
+            "https://www.youtube.com/v/pFfa2-lg3yg"
+         ]
+      },
+      "10": {
+         "red": [
+            5587,
+            9118,
+            4096
+         ],
+         "blue": [
+            4414,
+            5675,
+            3357
+         ],
+         "videos": [
+            "https://www.youtube.com/v/Cyj-v__-SKw"
+         ]
+      },
+      "11": {
+         "red": [
+            5123,
+            2046,
+            4265
+         ],
+         "blue": [
+            3636,
+            226,
+            341
+         ],
+         "videos": [
+            "https://www.youtube.com/v/t_hbr_wITJ0"
+         ]
+      },
+      "12": {
+         "red": [
+            9071,
+            4213,
+            6832
+         ],
+         "blue": [
+            4391,
+            7407,
+            2495
+         ],
+         "videos": [
+            "https://www.youtube.com/v/32Q7_ILSQO0"
+         ]
+      },
+      "13": {
+         "red": [
+            4400,
+            365,
+            8736
+         ],
+         "blue": [
+            2481,
+            107,
+            3019
+         ],
+         "videos": [
+            "https://www.youtube.com/v/5TyG_u-oaT8"
+         ]
+      },
+      "14": {
+         "red": [
+            2096,
+            3654,
+            9182
+         ],
+         "blue": [
+            772,
+            1987,
+            2052
+         ],
+         "videos": [
+            "https://www.youtube.com/v/CIvZ_Tw4TrM"
+         ]
+      },
+      "15": {
+         "red": [
+            1323,
+            5648,
+            6429
+         ],
+         "blue": [
+            4135,
+            2169,
+            1792
+         ],
+         "videos": [
+            "https://www.youtube.com/v/mp1vEDUlKx4"
+         ]
+      },
+      "16": {
+         "red": [
+            1706,
+            1727,
+            5526
+         ],
+         "blue": [
+            999,
+            6721,
+            8019
+         ],
+         "videos": [
+            "https://www.youtube.com/v/iPy0l2UWiKg"
+         ]
+      },
+      "17": {
+         "red": [
+            4450,
+            5667,
+            1311
+         ],
+         "blue": [
+            696,
+            573,
+            488
+         ],
+         "videos": [
+            "https://www.youtube.com/v/eiBIzn4okWs"
+         ]
+      },
+      "18": {
+         "red": [
+            4414,
+            3189,
+            190
+         ],
+         "blue": [
+            2930,
+            7457,
+            6357
+         ],
+         "videos": [
+            "https://www.youtube.com/v/RYDmb1AZ7-Q"
+         ]
+      },
+      "19": {
+         "red": [
+            876,
+            4682,
+            9118
+         ],
+         "blue": [
+            498,
+            3636,
+            245
+         ],
+         "videos": [
+            "https://www.youtube.com/v/DlOFuAsh_Fc"
+         ]
+      },
+      "20": {
+         "red": [
+            610,
+            9071,
+            5587
+         ],
+         "blue": [
+            4336,
+            2338,
+            68
+         ],
+         "videos": [
+            "https://www.youtube.com/v/0GG4N9su0ao"
+         ]
+      },
+      "21": {
+         "red": [
+            9260,
+            6024,
+            3019
+         ],
+         "blue": [
+            226,
+            201,
+            2495
+         ],
+         "videos": [
+            "https://www.youtube.com/v/2zMSFau0P8Y"
+         ]
+      },
+      "22": {
+         "red": [
+            9202,
+            6832,
+            1986
+         ],
+         "blue": [
+            4265,
+            4096,
+            1807
+         ],
+         "videos": [
+            "https://www.youtube.com/v/H2sss1TmS2E"
+         ]
+      },
+      "23": {
+         "red": [
+            6517,
+            5675,
+            1799
+         ],
+         "blue": [
+            107,
+            2046,
+            4930
+         ],
+         "videos": [
+            "https://www.youtube.com/v/KCJEjYaBaOM"
+         ]
+      },
+      "24": {
+         "red": [
+            3357,
+            2609,
+            365
+         ],
+         "blue": [
+            5816,
+            5123,
+            4391
+         ],
+         "videos": [
+            "https://www.youtube.com/v/wrT6Ox-KZns"
+         ]
+      },
+      "25": {
+         "red": [
+            2341,
+            4213,
+            9082
+         ],
+         "blue": [
+            2718,
+            341,
+            1796
+         ],
+         "videos": [
+            "https://www.youtube.com/v/9l2dggXrw1E"
+         ]
+      },
+      "26": {
+         "red": [
+            7407,
+            4400,
+            2169
+         ],
+         "blue": [
+            8736,
+            353,
+            7457
+         ],
+         "videos": [
+            "https://www.youtube.com/v/koDNSdAvWZA"
+         ]
+      },
+      "27": {
+         "red": [
+            488,
+            4414,
+            772
+         ],
+         "blue": [
+            3636,
+            1706,
+            999
+         ],
+         "videos": [
+            "https://www.youtube.com/v/Rgh7GDKxdQY"
+         ]
+      },
+      "28": {
+         "red": [
+            1792,
+            610,
+            1323
+         ],
+         "blue": [
+            1987,
+            498,
+            5667
+         ],
+         "videos": [
+            "https://www.youtube.com/v/D7bpsB7yUys"
+         ]
+      },
+      "29": {
+         "red": [
+            201,
+            2052,
+            9071
+         ],
+         "blue": [
+            1727,
+            9118,
+            573
+         ],
+         "videos": [
+            "https://www.youtube.com/v/DZq1Lm67uvw"
+         ]
+      },
+      "30": {
+         "red": [
+            226,
+            68,
+            3189
+         ],
+         "blue": [
+            5648,
+            1986,
+            696
+         ],
+         "videos": [
+            "https://www.youtube.com/v/OewQvlLUaRk"
+         ]
+      },
+      "31": {
+         "red": [
+            4135,
+            2930,
+            1799
+         ],
+         "blue": [
+            4336,
+            3019,
+            6832
+         ],
+         "videos": [
+            "https://www.youtube.com/v/OPnInosS16k"
+         ]
+      },
+      "32": {
+         "red": [
+            1311,
+            4391,
+            190
+         ],
+         "blue": [
+            9202,
+            2481,
+            2096
+         ],
+         "videos": [
+            "https://www.youtube.com/v/faQDG79ksCI"
+         ]
+      },
+      "33": {
+         "red": [
+            2718,
+            8019,
+            5123
+         ],
+         "blue": [
+            107,
+            1807,
+            6357
+         ],
+         "videos": [
+            "https://www.youtube.com/v/YD4oZgETsVA"
+         ]
+      },
+      "34": {
+         "red": [
+            876,
+            3357,
+            2341
+         ],
+         "blue": [
+            5675,
+            4930,
+            9082
+         ],
+         "videos": [
+            "https://www.youtube.com/v/-qkNomhR1hk"
+         ]
+      },
+      "35": {
+         "red": [
+            245,
+            9260,
+            5526
+         ],
+         "blue": [
+            4096,
+            4400,
+            353
+         ],
+         "videos": [
+            "https://www.youtube.com/v/iPMHw0hFbsM"
+         ]
+      },
+      "36": {
+         "red": [
+            4213,
+            4682,
+            6517
+         ],
+         "blue": [
+            3654,
+            365,
+            6024
+         ],
+         "videos": [
+            "https://www.youtube.com/v/GwgcXTniXao"
+         ]
+      },
+      "37": {
+         "red": [
+            4265,
+            1796,
+            2609
+         ],
+         "blue": [
+            2338,
+            2495,
+            6429
+         ],
+         "videos": [
+            "https://www.youtube.com/v/F6SphE_cckc"
+         ]
+      },
+      "38": {
+         "red": [
+            8736,
+            4450,
+            341
+         ],
+         "blue": [
+            6721,
+            5587,
+            5816
+         ],
+         "videos": [
+            "https://www.youtube.com/v/2K37wVEghVs"
+         ]
+      },
+      "39": {
+         "red": [
+            2046,
+            9182,
+            9118
+         ],
+         "blue": [
+            7407,
+            68,
+            5667
+         ],
+         "videos": [
+            "https://www.youtube.com/v/Vk4fgY4cdqk"
+         ]
+      },
+      "40": {
+         "red": [
+            1792,
+            498,
+            2052
+         ],
+         "blue": [
+            226,
+            4391,
+            4336
+         ],
+         "videos": [
+            "https://www.youtube.com/v/7meMhx2ABok"
+         ]
+      },
+      "41": {
+         "red": [
+            6357,
+            2096,
+            3636
+         ],
+         "blue": [
+            2169,
+            1799,
+            107
+         ],
+         "videos": [
+            "https://www.youtube.com/v/zA6yJ6cKicU"
+         ]
+      },
+      "42": {
+         "red": [
+            573,
+            2481,
+            2930
+         ],
+         "blue": [
+            1706,
+            1807,
+            3357
+         ],
+         "videos": [
+            "https://www.youtube.com/v/WjUPyEAxEeY"
+         ]
+      },
+      "43": {
+         "red": [
+            5675,
+            7457,
+            488
+         ],
+         "blue": [
+            6832,
+            4135,
+            245
+         ],
+         "videos": [
+            "https://www.youtube.com/v/P2S65iaqel8"
+         ]
+      },
+      "44": {
+         "red": [
+            610,
+            772,
+            4213
+         ],
+         "blue": [
+            9260,
+            5648,
+            9202
+         ],
+         "videos": [
+            "https://www.youtube.com/v/6d3o_3JGiMM"
+         ]
+      },
+      "45": {
+         "red": [
+            2338,
+            3654,
+            4930
+         ],
+         "blue": [
+            190,
+            201,
+            5526
+         ],
+         "videos": [
+            "https://www.youtube.com/v/2NYbsylddbw"
+         ]
+      },
+      "46": {
+         "red": [
+            999,
+            8736,
+            1796
+         ],
+         "blue": [
+            9071,
+            4265,
+            1323
+         ],
+         "videos": [
+            "https://www.youtube.com/v/HILuE8ClbBk"
+         ]
+      },
+      "47": {
+         "red": [
+            9082,
+            696,
+            5587
+         ],
+         "blue": [
+            365,
+            2495,
+            2046
+         ],
+         "videos": [
+            "https://www.youtube.com/v/xg8TXzFnGk0"
+         ]
+      },
+      "48": {
+         "red": [
+            2718,
+            5816,
+            4682
+         ],
+         "blue": [
+            4414,
+            4400,
+            1311
+         ],
+         "videos": [
+            "https://www.youtube.com/v/PKPuqpe1Wlg",
+            "https://www.youtube.com/v/O1yntOFJC-8"
+         ]
+      },
+      "49": {
+         "red": [
+            4450,
+            1987,
+            6024
+         ],
+         "blue": [
+            2341,
+            7407,
+            5123
+         ],
+         "videos": [
+            "https://www.youtube.com/v/aIybS6nlT4g"
+         ]
+      },
+      "50": {
+         "red": [
+            9182,
+            1727,
+            353
+         ],
+         "blue": [
+            2609,
+            876,
+            3189
+         ],
+         "videos": [
+            "https://www.youtube.com/v/Mb6bv2MAb9E"
+         ]
+      },
+      "51": {
+         "red": [
+            341,
+            3019,
+            4096
+         ],
+         "blue": [
+            6517,
+            6429,
+            8019
+         ],
+         "videos": [
+            "https://www.youtube.com/v/KXSurkMUn7E"
+         ]
+      },
+      "52": {
+         "red": [
+            1986,
+            7457,
+            2096
+         ],
+         "blue": [
+            6721,
+            4336,
+            9118
+         ],
+         "videos": [
+            "https://www.youtube.com/v/Vz0efHPAggE"
+         ]
+      },
+      "53": {
+         "red": [
+            245,
+            1792,
+            3357
+         ],
+         "blue": [
+            1807,
+            2052,
+            4213
+         ],
+         "videos": [
+            "https://www.youtube.com/v/9Vd8cQTNDZw"
+         ]
+      },
+      "54": {
+         "red": [
+            772,
+            226,
+            1706
+         ],
+         "blue": [
+            2169,
+            190,
+            1796
+         ],
+         "videos": [
+            "https://www.youtube.com/v/rElXFlGOvmU"
+         ]
+      },
+      "55": {
+         "red": [
+            2495,
+            9202,
+            3654
+         ],
+         "blue": [
+            498,
+            4135,
+            8736
+         ],
+         "videos": [
+            "https://www.youtube.com/v/-Ts503YU-9o"
+         ]
+      },
+      "56": {
+         "red": [
+            6832,
+            5816,
+            68
+         ],
+         "blue": [
+            1323,
+            6357,
+            4930
+         ],
+         "videos": [
+            "https://www.youtube.com/v/cpGWF1xlLIc"
+         ]
+      },
+      "57": {
+         "red": [
+            2338,
+            7407,
+            4450
+         ],
+         "blue": [
+            365,
+            5675,
+            2718
+         ],
+         "videos": [
+            "https://www.youtube.com/v/DRttkLIUQDc"
+         ]
+      },
+      "58": {
+         "red": [
+            201,
+            4265,
+            4400
+         ],
+         "blue": [
+            9182,
+            4414,
+            1799
+         ],
+         "videos": [
+            "https://www.youtube.com/v/65-Ii63SIeg"
+         ]
+      },
+      "59": {
+         "red": [
+            2341,
+            3019,
+            6429
+         ],
+         "blue": [
+            5526,
+            353,
+            2046
+         ],
+         "videos": [
+            "https://www.youtube.com/v/oT1D_mjVz_4"
+         ]
+      },
+      "60": {
+         "red": [
+            1727,
+            5667,
+            2481
+         ],
+         "blue": [
+            5123,
+            5587,
+            6517
+         ],
+         "videos": [
+            "https://www.youtube.com/v/X6WFWWK73lQ"
+         ]
+      },
+      "61": {
+         "red": [
+            8019,
+            876,
+            3636
+         ],
+         "blue": [
+            1311,
+            999,
+            5648
+         ],
+         "videos": [
+            "https://www.youtube.com/v/g42Rf4wbWWY"
+         ]
+      },
+      "62": {
+         "red": [
+            4682,
+            696,
+            2930
+         ],
+         "blue": [
+            488,
+            341,
+            610
+         ],
+         "videos": [
+            "https://www.youtube.com/v/WqYiwLMk7AY"
+         ]
+      },
+      "63": {
+         "red": [
+            1986,
+            9260,
+            1987
+         ],
+         "blue": [
+            2609,
+            9071,
+            107
+         ],
+         "videos": [
+            "https://www.youtube.com/v/-zS3VzI2yb0"
+         ]
+      },
+      "64": {
+         "red": [
+            573,
+            4096,
+            6024
+         ],
+         "blue": [
+            4391,
+            6721,
+            9082
+         ],
+         "videos": [
+            "https://www.youtube.com/v/AkxAFnu2KGw"
+         ]
+      },
+      "65": {
+         "red": [
+            7407,
+            1323,
+            3189
+         ],
+         "blue": [
+            2096,
+            245,
+            4450
+         ],
+         "videos": [
+            "https://www.youtube.com/v/eS2SYtVQ3wI"
+         ]
+      },
+      "66": {
+         "red": [
+            9202,
+            1799,
+            226
+         ],
+         "blue": [
+            1706,
+            9118,
+            68
+         ],
+         "videos": [
+            "https://www.youtube.com/v/wzRlraoO57I"
+         ]
+      },
+      "67": {
+         "red": [
+            3019,
+            4135,
+            4213
+         ],
+         "blue": [
+            4265,
+            4930,
+            772
+         ],
+         "videos": [
+            "https://www.youtube.com/v/ZsFlhWbw7Ho"
+         ]
+      },
+      "68": {
+         "red": [
+            7457,
+            365,
+            498
+         ],
+         "blue": [
+            9182,
+            5526,
+            2718
+         ],
+         "videos": [
+            "https://www.youtube.com/v/aWCIBwa8MRU"
+         ]
+      },
+      "69": {
+         "red": [
+            5675,
+            1311,
+            5123
+         ],
+         "blue": [
+            2052,
+            6429,
+            8736
+         ],
+         "videos": [
+            "https://www.youtube.com/v/ZoI6P-EySaU"
+         ]
+      },
+      "70": {
+         "red": [
+            2495,
+            610,
+            8019
+         ],
+         "blue": [
+            2481,
+            4414,
+            1792
+         ],
+         "videos": [
+            "https://www.youtube.com/v/9LDfmm4UlyM"
+         ]
+      },
+      "71": {
+         "red": [
+            1727,
+            3636,
+            696
+         ],
+         "blue": [
+            190,
+            6832,
+            9260
+         ],
+         "videos": [
+            "https://www.youtube.com/v/yYF2d_VZcwI"
+         ]
+      },
+      "72": {
+         "red": [
+            5648,
+            2046,
+            6721
+         ],
+         "blue": [
+            4400,
+            3357,
+            2338
+         ],
+         "videos": [
+            "https://www.youtube.com/v/J_iU3UNyvw4"
+         ]
+      },
+      "73": {
+         "red": [
+            1807,
+            4336,
+            9071
+         ],
+         "blue": [
+            3189,
+            341,
+            6024
+         ],
+         "videos": [
+            "https://www.youtube.com/v/8QMJ39R1MGc"
+         ]
+      },
+      "74": {
+         "red": [
+            9082,
+            6517,
+            488
+         ],
+         "blue": [
+            353,
+            1987,
+            5816
+         ],
+         "videos": [
+            "https://www.youtube.com/v/b1_FRcSuTUU"
+         ]
+      },
+      "75": {
+         "red": [
+            573,
+            1986,
+            5667
+         ],
+         "blue": [
+            3654,
+            2169,
+            876
+         ],
+         "videos": [
+            "https://www.youtube.com/v/MKmB5hBvcjg"
+         ]
+      },
+      "76": {
+         "red": [
+            1796,
+            4682,
+            201
+         ],
+         "blue": [
+            4096,
+            6357,
+            4391
+         ],
+         "videos": [
+            "https://www.youtube.com/v/HMuECKvzFOc"
+         ]
+      },
+      "77": {
+         "red": [
+            999,
+            107,
+            2341
+         ],
+         "blue": [
+            2930,
+            2609,
+            5587
+         ],
+         "videos": [
+            "https://www.youtube.com/v/-6yWAaE3WUc"
+         ]
+      },
+      "78": {
+         "red": [
+            68,
+            4213,
+            4414
+         ],
+         "blue": [
+            5123,
+            498,
+            2096
+         ],
+         "videos": [
+            "https://www.youtube.com/v/6qTQwDTkFn8"
+         ]
+      },
+      "79": {
+         "red": [
+            696,
+            9202,
+            7457
+         ],
+         "blue": [
+            3019,
+            1792,
+            1727
+         ],
+         "videos": [
+            "https://www.youtube.com/v/xtukj2RWRpw"
+         ]
+      },
+      "80": {
+         "red": [
+            4930,
+            245,
+            6721
+         ],
+         "blue": [
+            6429,
+            226,
+            2481
+         ],
+         "videos": [
+            "https://www.youtube.com/v/SqXSyd2osiY"
+         ]
+      },
+      "81": {
+         "red": [
+            8019,
+            9071,
+            190
+         ],
+         "blue": [
+            1799,
+            4450,
+            2046
+         ],
+         "videos": [
+            "https://www.youtube.com/v/XPe2n-BAM4k"
+         ]
+      },
+      "82": {
+         "red": [
+            9118,
+            6517,
+            4265
+         ],
+         "blue": [
+            488,
+            2718,
+            9260
+         ],
+         "videos": [
+            "https://www.youtube.com/v/3KM103enoYM"
+         ]
+      },
+      "83": {
+         "red": [
+            1987,
+            341,
+            2338
+         ],
+         "blue": [
+            573,
+            8736,
+            6832
+         ],
+         "videos": [
+            "https://www.youtube.com/v/Nbkyu8uGGjk"
+         ]
+      },
+      "84": {
+         "red": [
+            1706,
+            4391,
+            5675
+         ],
+         "blue": [
+            3654,
+            3189,
+            4400
+         ],
+         "videos": [
+            "https://www.youtube.com/v/-y3GectYhY0"
+         ]
+      },
+      "85": {
+         "red": [
+            3357,
+            2495,
+            1323
+         ],
+         "blue": [
+            107,
+            201,
+            1311
+         ],
+         "videos": [
+            "https://www.youtube.com/v/LHfn4-Uo3Yw"
+         ]
+      },
+      "86": {
+         "red": [
+            772,
+            4336,
+            2609
+         ],
+         "blue": [
+            4096,
+            876,
+            7407
+         ],
+         "videos": [
+            "https://www.youtube.com/v/Ayj6xU1fjRU"
+         ]
+      },
+      "87": {
+         "red": [
+            5816,
+            2169,
+            5648
+         ],
+         "blue": [
+            2341,
+            6024,
+            9182
+         ],
+         "videos": [
+            "https://www.youtube.com/v/OSlqALailTY"
+         ]
+      },
+      "88": {
+         "red": [
+            1796,
+            1807,
+            365
+         ],
+         "blue": [
+            353,
+            610,
+            3636
+         ],
+         "videos": [
+            "https://www.youtube.com/v/QdlTA6QiVSY"
+         ]
+      },
+      "89": {
+         "red": [
+            2052,
+            5526,
+            1986
+         ],
+         "blue": [
+            4682,
+            5587,
+            4135
+         ],
+         "videos": [
+            "https://www.youtube.com/v/_eLOUSaJ7bQ"
+         ]
+      },
+      "90": {
+         "red": [
+            6357,
+            9082,
+            226
+         ],
+         "blue": [
+            5667,
+            999,
+            2930
+         ],
+         "videos": [
+            "https://www.youtube.com/v/mg5-m7slU7Q"
+         ]
+      },
+      "91": {
+         "red": [
+            1792,
+            2718,
+            190
+         ],
+         "blue": [
+            68,
+            245,
+            573
+         ],
+         "videos": [
+            "https://www.youtube.com/v/OfZ2REIQ8Xo"
+         ]
+      },
+      "92": {
+         "red": [
+            498,
+            6429,
+            3654
+         ],
+         "blue": [
+            488,
+            9071,
+            2481
+         ],
+         "videos": [
+            "https://www.youtube.com/v/-dgRVSeJLQs"
+         ]
+      },
+      "93": {
+         "red": [
+            4930,
+            9260,
+            1706
+         ],
+         "blue": [
+            7457,
+            1311,
+            2338
+         ],
+         "videos": [
+            "https://www.youtube.com/v/Eic3avhXwu8"
+         ]
+      },
+      "94": {
+         "red": [
+            696,
+            6721,
+            1987
+         ],
+         "blue": [
+            4213,
+            5675,
+            201
+         ],
+         "videos": [
+            "https://www.youtube.com/v/nPM0akPag6c"
+         ]
+      },
+      "95": {
+         "red": [
+            2169,
+            4265,
+            4336
+         ],
+         "blue": [
+            2046,
+            8019,
+            5816
+         ],
+         "videos": [
+            "https://www.youtube.com/v/5RvF93K95w0"
+         ]
+      },
+      "96": {
+         "red": [
+            772,
+            8736,
+            4096
+         ],
+         "blue": [
+            3189,
+            2341,
+            610
+         ],
+         "videos": [
+            "https://www.youtube.com/v/2Nf10d3UomA"
+         ]
+      },
+      "97": {
+         "red": [
+            5587,
+            876,
+            1807
+         ],
+         "blue": [
+            1796,
+            2096,
+            4400
+         ],
+         "videos": [
+            "https://www.youtube.com/v/RaYC__QV5wM"
+         ]
+      },
+      "98": {
+         "red": [
+            3357,
+            9182,
+            999
+         ],
+         "blue": [
+            4682,
+            3019,
+            4450
+         ],
+         "videos": [
+            "https://www.youtube.com/v/l6iBhWqJoLE"
+         ]
+      },
+      "99": {
+         "red": [
+            3636,
+            1986,
+            4391
+         ],
+         "blue": [
+            2930,
+            2495,
+            6517
+         ],
+         "videos": [
+            "https://www.youtube.com/v/1fY4_1jVOhM"
+         ]
+      },
+      "100": {
+         "red": [
+            365,
+            9118,
+            4135
+         ],
+         "blue": [
+            341,
+            6357,
+            1727
+         ],
+         "videos": [
+            "https://www.youtube.com/v/dmddFNj2huY"
+         ]
+      },
+      "101": {
+         "red": [
+            6024,
+            1323,
+            4414
+         ],
+         "blue": [
+            1799,
+            2609,
+            5526
+         ],
+         "videos": [
+            "https://www.youtube.com/v/3vXTnW--94U"
+         ]
+      },
+      "102": {
+         "red": [
+            5667,
+            2052,
+            107
+         ],
+         "blue": [
+            7407,
+            353,
+            9202
+         ],
+         "videos": [
+            "https://www.youtube.com/v/4Dh14DDMKrY"
+         ]
+      },
+      "103": {
+         "red": [
+            5648,
+            5123,
+            201
+         ],
+         "blue": [
+            9082,
+            1706,
+            6832
+         ],
+         "videos": [
+            "https://www.youtube.com/v/P6rbeo16_9M"
+         ]
+      },
+      "104": {
+         "red": [
+            4336,
+            3654,
+            245
+         ],
+         "blue": [
+            696,
+            2341,
+            4265
+         ],
+         "videos": [
+            "https://www.youtube.com/v/sg1Pwc_yKug"
+         ]
+      },
+      "105": {
+         "red": [
+            8736,
+            5816,
+            5675
+         ],
+         "blue": [
+            2096,
+            1792,
+            9260
+         ],
+         "videos": [
+            "https://www.youtube.com/v/gFKXt21BLbM"
+         ]
+      },
+      "106": {
+         "red": [
+            2338,
+            8019,
+            226
+         ],
+         "blue": [
+            4213,
+            488,
+            9182
+         ],
+         "videos": [
+            "https://www.youtube.com/v/hZibtTLrjj0"
+         ]
+      },
+      "107": {
+         "red": [
+            7457,
+            5587,
+            3019
+         ],
+         "blue": [
+            3636,
+            573,
+            9071
+         ],
+         "videos": [
+            "https://www.youtube.com/v/vBD46C7IK6I"
+         ]
+      },
+      "108": {
+         "red": [
+            2046,
+            4096,
+            2481
+         ],
+         "blue": [
+            1987,
+            999,
+            4135
+         ],
+         "videos": [
+            "https://www.youtube.com/v/eUyA5hAQuhM"
+         ]
+      },
+      "109": {
+         "red": [
+            1799,
+            1323,
+            772
+         ],
+         "blue": [
+            1986,
+            1727,
+            365
+         ],
+         "videos": [
+            "https://www.youtube.com/v/oGj-0VwuqE8"
+         ]
+      },
+      "110": {
+         "red": [
+            3189,
+            2169,
+            2495
+         ],
+         "blue": [
+            3357,
+            2052,
+            2718
+         ],
+         "videos": [
+            "https://www.youtube.com/v/ncvZ7F9nOuU"
+         ]
+      },
+      "111": {
+         "red": [
+            4400,
+            4450,
+            498
+         ],
+         "blue": [
+            6024,
+            4930,
+            2930
+         ],
+         "videos": [
+            "https://www.youtube.com/v/5mBaT-mmPiA"
+         ]
+      },
+      "112": {
+         "red": [
+            6721,
+            6832,
+            1311
+         ],
+         "blue": [
+            5667,
+            610,
+            2609
+         ],
+         "videos": [
+            "https://www.youtube.com/v/JD5PI5zLm30"
+         ]
+      },
+      "113": {
+         "red": [
+            5648,
+            1796,
+            6357
+         ],
+         "blue": [
+            5526,
+            9202,
+            6517
+         ],
+         "videos": [
+            "https://www.youtube.com/v/uJuyKyt67zA"
+         ]
+      },
+      "114": {
+         "red": [
+            6429,
+            9082,
+            7407
+         ],
+         "blue": [
+            1807,
+            190,
+            4682
+         ],
+         "videos": [
+            "https://www.youtube.com/v/tUnykS-q4VY"
+         ]
+      },
+      "115": {
+         "red": [
+            68,
+            107,
+            341
+         ],
+         "blue": [
+            876,
+            4391,
+            4414
+         ],
+         "videos": [
+            "https://www.youtube.com/v/7L7XNENga9Y"
+         ]
+      },
+      "116": {
+         "red": [
+            353,
+            5123,
+            999
+         ],
+         "blue": [
+            9118,
+            2338,
+            1792
+         ],
+         "videos": [
+            "https://www.youtube.com/v/L-ccwe1GD5k"
+         ]
+      },
+      "117": {
+         "red": [
+            9182,
+            2481,
+            5675
+         ],
+         "blue": [
+            3636,
+            1323,
+            4336
+         ],
+         "videos": [
+            "https://www.youtube.com/v/x3QD6du0EoI"
+         ]
+      },
+      "118": {
+         "red": [
+            5816,
+            3357,
+            4096
+         ],
+         "blue": [
+            226,
+            3654,
+            1727
+         ],
+         "videos": [
+            "https://www.youtube.com/v/sFn8iyR1o_I"
+         ]
+      },
+      "119": {
+         "red": [
+            2046,
+            2930,
+            8736
+         ],
+         "blue": [
+            201,
+            772,
+            245
+         ],
+         "videos": [
+            "https://www.youtube.com/v/P8NQZDmzleg"
+         ]
+      },
+      "120": {
+         "red": [
+            4135,
+            2096,
+            1706
+         ],
+         "blue": [
+            9071,
+            5667,
+            2718
+         ],
+         "videos": [
+            "https://www.youtube.com/v/SQ8aF4CczKA"
+         ]
+      },
+      "121": {
+         "red": [
+            4930,
+            3189,
+            9202
+         ],
+         "blue": [
+            8019,
+            365,
+            1987
+         ],
+         "videos": [
+            "https://www.youtube.com/v/JZWYYogLmDg"
+         ]
+      },
+      "122": {
+         "red": [
+            3019,
+            1311,
+            7407
+         ],
+         "blue": [
+            1986,
+            498,
+            9082
+         ],
+         "videos": [
+            "https://www.youtube.com/v/PDMf1S2jUUw"
+         ]
+      },
+      "123": {
+         "red": [
+            4414,
+            6721,
+            1807
+         ],
+         "blue": [
+            6517,
+            9260,
+            2169
+         ],
+         "videos": [
+            "https://www.youtube.com/v/ovk-zL5mtKo"
+         ]
+      },
+      "124": {
+         "red": [
+            4391,
+            488,
+            353
+         ],
+         "blue": [
+            5587,
+            1799,
+            5648
+         ],
+         "videos": [
+            "https://www.youtube.com/v/LCIq-8VyU-s"
+         ]
+      },
+      "125": {
+         "red": [
+            4400,
+            2609,
+            573
+         ],
+         "blue": [
+            6357,
+            696,
+            4213
+         ],
+         "videos": [
+            "https://www.youtube.com/v/iv6mHKLbELI"
+         ]
+      },
+      "126": {
+         "red": [
+            6024,
+            190,
+            2052
+         ],
+         "blue": [
+            610,
+            4265,
+            876
+         ],
+         "videos": [
+            "https://www.youtube.com/v/Fa2u6Jz7VxQ"
+         ]
+      },
+      "127": {
+         "red": [
+            6832,
+            107,
+            4450
+         ],
+         "blue": [
+            9118,
+            1796,
+            6429
+         ],
+         "videos": [
+            "https://www.youtube.com/v/1ZE22yY59Ys"
+         ]
+      },
+      "128": {
+         "red": [
+            2495,
+            2341,
+            4682
+         ],
+         "blue": [
+            7457,
+            68,
+            5123
+         ],
+         "videos": [
+            "https://www.youtube.com/v/NYRMeh0P-kc"
+         ]
+      },
+      "129": {
+         "red": [
+            5526,
+            3636,
+            1792
+         ],
+         "blue": [
+            341,
+            772,
+            5667
+         ],
+         "videos": [
+            "https://www.youtube.com/v/RH-tlgvvZq8"
+         ]
+      }
+   },
+   "elims": {}
+}
