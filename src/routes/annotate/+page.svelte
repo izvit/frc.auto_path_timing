@@ -5,6 +5,33 @@
     import { onMount } from "svelte";
     import VideoPlayer from "./VideoPlayer.svelte";
   
+    //--------------
+    // Helper functions
+    //--------------
+        async function fetchEventData() {
+            console.info("Fetching event data: " + eventName)
+            let response = await fetch('/data/events/event_' + eventName +'.json')
+            matchInfo = await response.json()
+
+            for (const [key, value] of Object.entries(matchInfo.quals)) {
+                for ( let t of value["red"] )
+                    teams.add(Number(t))
+                for ( let t of value["blue"] )
+                    teams.add(Number(t))
+            }
+            console.log("teams: " + teams.size)
+            console.log(matchInfo)
+            teams=teams;
+        }
+
+        function resetState() {
+            videoPlayer.loadRemoteVideo("")
+            fieldPath.reset()
+        }
+
+    //--------------
+    // Annotaions
+    //--------------
     let fieldPath
     let videoPlayer
     let alliance
@@ -16,14 +43,24 @@
     $: startTime = $videoMatch.StartTime
     $: alliance = $gameData.AllianceColor == 0? "blue" : "red"
 
+
+    //--------------
+    // Stream Management
+    //--------------
+	let resp;
+	let matchInfo;
+	let eventName;
+	let teamNumber;
+	let teams = new Set();
+	let teamSorted;
+
+
     onMount(() => {
             timeFn = videoPlayer.getCurrTime
             durationFn = videoPlayer.getDuration
-            if ($matchSelect !== null ) {
-                videoPlayer.loadRemoteVideo($matchSelect["videoUrl"])
-            }
         }
     )
+
 
 </script>
 <svelte:head>
@@ -54,17 +91,27 @@
       </div>
 
       <VideoPlayer bind:this={videoPlayer} bind:currTime={time}/>
-        <!-- {#await import('./Player.svelte') then {default: Player}}
-        <svelte:component this={Player} bind:this={videoPlayer}/>
+        <!-- {#await import('./VideoPlayer.svelte') then {default: VideoPlayer}}
+        <svelte:component this={VideoPlayer} bind:this={videoPlayer}/>
         {/await} -->
   </div>
   <div class="flex-1 bg-black p-4">
     <div class="grid grid-cols-1 justify-center">
-        <button class="focus:outline-none text-white bg-green-700 hover:bg-green-800 font-medium  rounded-lg text-md px-5 py-2.5 mb-2 dark:bg-green-600 dark:hover:bg-green-700 disabled:bg-slate-200 disabled:text-slate-500 w-full"
-            on:click={fieldPath.undo()}
-            disabled={$autoEventList.length === 0}>Undo</button
-        >
-
+        <div class="flex justify-center space-x-2">
+            <button class="focus:outline-none text-white bg-blue-700 font-medium  rounded-lg text-md px-5 py-2.5 mb-2 dark:bg-blue-600 disabled:bg-slate-200 disabled:text-slate-500 w-full"
+                on:click={()=> {console.log("Submitting results")}}
+                disabled={$autoEventList.length === 0}>Submit</button
+            >
+            <button class="focus:outline-none text-white bg-orange-700  font-medium  rounded-lg text-md px-5 py-2.5 mb-2 dark:bg-orange-600  disabled:bg-slate-200 disabled:text-slate-500 w-full"
+                on:click={()=> {fieldPath.reset()}}
+                disabled={$autoEventList.length==0}>Clear</button
+            >
+            <button class="focus:outline-none text-white bg-green-700  font-medium  rounded-lg text-md px-5 py-2.5 mb-2 dark:bg-green-600 disabled:bg-slate-200 disabled:text-slate-500 w-full"
+                on:click={fieldPath.undo()}
+                disabled={$autoEventList.length === 0}>Undo</button
+            >
+        </div>
+        
         <FieldPathAuto  bind:this={fieldPath} 
                         bind:timeFn={timeFn} 
                         bind:durationFn={durationFn}
@@ -94,3 +141,52 @@
     </div>
   </div>
 </div>
+
+<div class="flex justify-center w-full m-5 space-x-2">
+	<select class="p-2" bind:value={eventName} on:change={fetchEventData}>
+        <option disabled selected value> -- select event -- </option>
+		<option value="2023hop">Houston (2023 Hopper)</option>
+        <option value="local">Local</option>
+	</select>
+	<!-- <select class="p-2" bind:value={teamNumber} >
+		{#each teamSorted as t}
+			<option value="{t}">{t}</option>
+		{/each}
+	</select> -->
+</div>
+
+{#if (matchInfo!=null)}
+	<table class="bg-white md:w-[60%] mx-auto text-center">
+		<thead>
+			<tr>
+				<th>Match</th>
+				<th>Red</th>
+				<th>Blue</th>
+				<th>Videos</th>		
+			</tr>
+		</thead>
+		<tbody>
+			{#each Object.entries(matchInfo["quals"]) as [key, value], i}
+				<tr class="{(i%2==0)? "bg-slate-200" : "bg-white" }">
+					<td>
+						Q{key}
+					</td>
+					<td>
+						{value["red"]}
+					</td>
+					<td>
+						{value["blue"]}
+					</td>
+					<td class="flex-1">
+						{#each value["videos"] as v}
+							<a href="#" on:mousedown={()=>{resetState(); videoPlayer.loadRemoteVideo(v); }}>Link</a>
+						{/each}
+					</td>
+				</tr>
+			{/each}
+		</tbody>
+	</table>
+{/if}
+
+
+

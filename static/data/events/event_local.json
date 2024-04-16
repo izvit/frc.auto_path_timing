@@ -1,0 +1,20 @@
+{
+   "quals": {
+      "1": {
+         "red": [
+            6357,
+            9182,
+            610
+         ],
+         "blue": [
+            6429,
+            1706,
+            1986
+         ],
+         "videos": [
+            "file:///C:/Users/USER-24-01/6328_workspace/data/2024necmp/test.mp4"
+         ]
+      }
+  },
+   "elims": {}
+}

@@ -49,10 +49,13 @@
       
     
 
-    $: if(alliance && loaded===true) setAlliance(alliance)
+    $: if(alliance && loaded===true) {resetField()}
 
-    function setAlliance(alliance){
+    //-----------------------------
+    //  Setup and Initialization
+    //-----------------------------
 
+    function initField(alliance){
       if(ctx){
         gameField = new GameField(ctx, canvas.width, canvas.height, alliance)
 
@@ -70,9 +73,18 @@
       }
     }
 
+    function resetField() {
+      currEvent=null;
+      currPos=null;
+      $videoMatch.StartTime=null;
+      $autoEventList=[]
+      initField(alliance)
+      renderEvents()
+    }
+
     //-----------------------------
     //  Game Event Helpers
-    //------------------------------
+    //-----------------------------
   
       /**
        * Enum representing whether robot is holding a note
@@ -271,6 +283,14 @@
             
             renderEvents()
         }
+
+        /**
+         * External function to reset the component
+         */
+        export function reset(){
+          resetField()
+        }
+
 
     //-----------------------------
     //  Combined logic for touch and mouse events
