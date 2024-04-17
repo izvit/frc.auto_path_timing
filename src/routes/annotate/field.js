@@ -356,12 +356,13 @@ export class ContextMenu {
                 rel_center_loc = 0.15;
             }
 
-            let notePos = [{ x: width * rel_row_loc, y: height / 2 },
-            { x: width * rel_row_loc, y: height / 2 - height / 6 },
+            let notePos = [
             { x: width * rel_row_loc, y: height / 2 - 2 * height / 6 },
-            { x: width * rel_center_loc, y: height / 2 },
-            { x: width * rel_center_loc, y: height / 2 - height / 6 },
+            { x: width * rel_row_loc, y: height / 2 - height / 6 },
+            { x: width * rel_row_loc, y: height / 2 },
             { x: width * rel_center_loc, y: height / 2 - 2.1 * height / 6 },
+            { x: width * rel_center_loc, y: height / 2 - height / 6 },
+            { x: width * rel_center_loc, y: height / 2 },
             { x: width * rel_center_loc, y: height / 2 + height / 6 },
             { x: width * rel_center_loc, y: height / 2 + 2.1 * height / 6 }]
 

@@ -21,6 +21,13 @@
         console.log("nudge: currTime: " + player.currentTime)
     }
 
+    export function seek(time)
+    {
+        if(player.currentTime)
+            player.currentTime = time; 
+        console.log("nudge: currTime: " + player.currentTime)
+    }
+
     export function pausePlay()
     {
         player.pause(); 

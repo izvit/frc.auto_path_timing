@@ -4,6 +4,7 @@
     import { gameData, autoEventList, videoMatch, matchSelect } from "../stores"
     import { onMount } from "svelte";
     import VideoPlayer from "./VideoPlayer.svelte";
+    import ResultsForm from "./ResultsForm.svelte";
   
     //--------------
     // Helper functions
@@ -24,9 +25,11 @@
             teams=teams;
         }
 
-        function resetState() {
-            videoPlayer.loadRemoteVideo("")
+        function resetState(resetVideo=true) {
+            console.log("Reseting state")
             fieldPath.reset()
+            if(resetVideo)
+                videoPlayer.loadRemoteVideo("")
         }
 
     //--------------
@@ -47,13 +50,9 @@
     //--------------
     // Stream Management
     //--------------
-	let resp;
 	let matchInfo;
 	let eventName;
-	let teamNumber;
 	let teams = new Set();
-	let teamSorted;
-
 
     onMount(() => {
             timeFn = videoPlayer.getCurrTime
@@ -61,6 +60,10 @@
         }
     )
 
+    //----------------
+    //  FORM
+    //----------------
+    let resultForm;
 
 </script>
 <svelte:head>
@@ -98,12 +101,8 @@
   <div class="flex-1 bg-black p-4">
     <div class="grid grid-cols-1 justify-center">
         <div class="flex justify-center space-x-2">
-            <button class="focus:outline-none text-white bg-blue-700 font-medium  rounded-lg text-md px-5 py-2.5 mb-2 dark:bg-blue-600 disabled:bg-slate-200 disabled:text-slate-500 w-full"
-                on:click={()=> {console.log("Submitting results")}}
-                disabled={$autoEventList.length === 0}>Submit</button
-            >
             <button class="focus:outline-none text-white bg-orange-700  font-medium  rounded-lg text-md px-5 py-2.5 mb-2 dark:bg-orange-600  disabled:bg-slate-200 disabled:text-slate-500 w-full"
-                on:click={()=> {fieldPath.reset()}}
+                on:click={()=> {fieldPath.reset(); resultForm.clearMsg()}}
                 disabled={$autoEventList.length==0}>Clear</button
             >
             <button class="focus:outline-none text-white bg-green-700  font-medium  rounded-lg text-md px-5 py-2.5 mb-2 dark:bg-green-600 disabled:bg-slate-200 disabled:text-slate-500 w-full"
@@ -123,9 +122,17 @@
         {:else}
         <div class="flex">
             <span class="text-center w-full text-white"> 
-                <b>Video time: </b> 
-                [start: {(time===null) ? "n/a" : parseFloat(startTime).toFixed(3)}, 
-                 cur: {(time===null) ? "n/a" :  time.toFixed(3)}]</span>
+                <b>Video: </b> 
+                [start: <a on:click={  ()=>{ 
+                                        if(time!==null && startTime>=0) 
+                                            videoPlayer.seek(startTime)
+                                        }
+                                    }
+                        >
+                            {(time===null) ? "n/a" : parseFloat(startTime).toFixed(3)}
+                        </a>, 
+                 cur: {(time===null) ? "n/a" :  time.toFixed(3)}]
+            </span>
             <span class="text-center w-full text-green-400"> 
                 <b>Match time: </b> 
                 [
@@ -141,6 +148,11 @@
     </div>
   </div>
 </div>
+
+<ResultsForm bind:this={resultForm}
+             bind:eventName={eventName} 
+             bind:autoPaths={$autoEventList}
+             on:submitted={() => {console.log("received submitted event"); resetState(false)}}/>
 
 <div class="flex justify-center w-full m-5 space-x-2">
 	<select class="p-2" bind:value={eventName} on:change={fetchEventData}>
