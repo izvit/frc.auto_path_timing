@@ -75,10 +75,10 @@
 		<input bind:this={teamInput} bind:value={teamNum} placeholder="Team number" type="number"/>
 		<input bind:this={matchInput} bind:value={matchNum} placeholder="Match (e.g Q1, E2)"  type="text"/>
 		<input bind:this={autoPaths} bind:value={autoPaths} type="hidden"/>
-		<button class="bg-slate-400 w-35" type="submit" on:submit={submit}>
+		<button class="bg-slate-300 w-37 p-1" type="submit" on:submit={submit}>
 			Submit
 		</button>
-		<button class="bg-slate-400 w-35" on:click={()=>{matchInput.value=""; teamInput.value=""} }>
+		<button class="bg-slate-300 w-27 p-1" on:click={()=>{matchInput.value=""; teamInput.value=""} }>
 			Clear
 		</button>
 	</form>
