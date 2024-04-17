@@ -52,6 +52,7 @@
     //--------------
 	let matchInfo;
 	let eventName;
+    let matchNum
 	let teams = new Set();
 
     onMount(() => {
@@ -151,6 +152,7 @@
 
 <ResultsForm bind:this={resultForm}
              bind:eventName={eventName} 
+             bind:matchNum={matchNum}
              bind:autoPaths={$autoEventList}
              on:submitted={() => {console.log("received submitted event"); resetState(false)}}/>
 
@@ -191,7 +193,17 @@
 					</td>
 					<td class="flex-1">
 						{#each value["videos"] as v}
-							<a href="#" on:mousedown={()=>{resetState(); videoPlayer.loadRemoteVideo(v); }}>Link</a>
+							<a  href="#" 
+                                class = "text-blue-600 hover:text-blue-800 visited:text-purple-600"
+                                on:mousedown={()=> {
+                                                        resetState(); 
+                                                        videoPlayer.loadRemoteVideo(v); 
+                                                        matchNum="Q"+key
+                                                    }
+                                                }
+                            >
+                                Link
+                            </a>
 						{/each}
 					</td>
 				</tr>

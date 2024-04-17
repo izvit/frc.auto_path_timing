@@ -2,7 +2,7 @@
   	import { createEventDispatcher } from 'svelte'
 
 	export let eventName = null
-	export let team  = null
+	export let teamNum  = null
 	export let matchNum = null
 	export let autoPaths = []
 	
@@ -25,7 +25,7 @@
 			mode: 'cors',
 			method: 'POST',
 			body: JSON.stringify({	"event":eventName, 
-									"team":team, 
+									"team":teamNum, 
 									"match": matchNum,
 									"autopaths": autoPaths
 								 }, 
@@ -48,7 +48,7 @@
 			return;
 		}
 
-		if (!team || !isNumber(team)) {
+		if (!teamNum || !isNumber(teamNum)) {
 			formMsg="Team number must be numeric"
 			return;
 		}
@@ -63,7 +63,7 @@
 
 		dispatch('submitted', {"matchNum" : matchNum})
 		matchNum=""
-		team=""
+		teamNum=""
 		
 	}
 	
@@ -72,7 +72,7 @@
 <div class="flex flex-col w-full p-2">
 	<form class="flex justify-center w-full space-x-2 p-2" on:submit|preventDefault={submit}>
 		<input bind:this={eventInput} bind:value={eventName} placeholder="Name of event" type="text"/>
-		<input bind:this={teamInput} bind:value={team} placeholder="Team number" type="number"/>
+		<input bind:this={teamInput} bind:value={teamNum} placeholder="Team number" type="number"/>
 		<input bind:this={matchInput} bind:value={matchNum} placeholder="Match (e.g Q1, E2)"  type="text"/>
 		<input bind:this={autoPaths} bind:value={autoPaths} type="hidden"/>
 		<button class="bg-slate-400 w-35" type="submit" on:submit={submit}>
