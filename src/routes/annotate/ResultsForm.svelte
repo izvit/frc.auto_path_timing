@@ -3,7 +3,7 @@
 
 	export let eventName = null
 	export let teamNum  = null
-	export let matchNum = null
+	export let matchId = null
 	export let autoPaths = []
 	
 	const dispatch = createEventDispatcher()
@@ -17,16 +17,21 @@
 		formMsg=""
 	}
 
+	function setMessage(msg){
+		formMsg=msg
+	}
+
 	function isNumber(value) {
 		return typeof value === 'number';
 	}
 	async function saveForm () {
-		const res = await fetch('http://localhost:5000/autopaths', {
+		const serverUri = 'http://localhost:5000/autopaths'
+		const res = await fetch(serverUri, {
 			mode: 'cors',
 			method: 'POST',
 			body: JSON.stringify({	"event":eventName, 
 									"team":teamNum, 
-									"match": matchNum,
+									"match": matchId,
 									"autopaths": autoPaths
 								 }, 
 								 (k, v) => {
@@ -39,6 +44,9 @@
 				'Access-Control-Allow-Origin':'*',
 				'Content-Type': 'application/json'
 			}
+		}).catch((err) => {
+			console.error("Error: " + err.message)
+			setMessage("Unable submit match data (server: " + serverUri + ")")
 		})
 	}
 
@@ -53,16 +61,17 @@
 			return;
 		}
 		
-		const regex = /^[XQE]\d+$/;
-		if (!matchNum || !matchNum.match(regex)) {
+		const regex = /^[XQExqe]\d+$/;
+		if (!matchId || !matchId.match(regex)) {
 			formMsg="Invalid match id.  Must start with Q or E and be followed by a number."
 			return;
 		}
+		matchId = matchId.toUpperCase()
 		formMsg=""
 		await saveForm()
 
-		dispatch('submitted', {"matchNum" : matchNum})
-		matchNum=""
+		dispatch('submitted', {"matchNum" : matchId})
+		matchId=""
 		teamNum=""
 		
 	}
@@ -73,7 +82,7 @@
 	<form class="flex justify-center w-full space-x-2 p-2" on:submit|preventDefault={submit}>
 		<input bind:this={eventInput} bind:value={eventName} placeholder="Name of event" type="text"/>
 		<input bind:this={teamInput} bind:value={teamNum} placeholder="Team number" type="number"/>
-		<input bind:this={matchInput} bind:value={matchNum} placeholder="Match (e.g Q1, E2)"  type="text"/>
+		<input bind:this={matchInput} bind:value={matchId} placeholder="Match (e.g Q1, E2)"  type="text"/>
 		<input bind:this={autoPaths} bind:value={autoPaths} type="hidden"/>
 		<button class="bg-slate-300 w-37 p-1" type="submit" on:submit={submit}>
 			Submit

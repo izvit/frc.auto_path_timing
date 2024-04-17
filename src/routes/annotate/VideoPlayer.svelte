@@ -112,7 +112,7 @@
                     speedUp: '>',
                     slowDown: '<',
                 }}
-                playbackRate={0.5}
+                onPlay={()=> {player.playbackRate = playbackRateSelect.value}}
     >
         <media-provider></media-provider>
         <media-video-layout></media-video-layout>
