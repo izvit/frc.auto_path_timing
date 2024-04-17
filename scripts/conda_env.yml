@@ -3,3 +3,7 @@ channels:
 dependencies:
   - python
   - beautifulsoup4
+  - flask
+  - pip
+  - pip:
+    - flask-cors
