@@ -5,13 +5,16 @@ from typing import Dict, List
 import re
 import logging
 import sys
+import sqlite3
+con = sqlite3.connect("tutorial.db")
+
 
 logging.basicConfig(level=logging.INFO)
 
-def filterEvents(events : List, event_type:str) -> List:
+def filterEvents(events : List, event_type:List) -> List:
     ret = []
     for e in events:
-        if e["name"]==event_type:
+        if e["name"] in event_type:
             ret.append(e)
 
     return ret
@@ -25,16 +28,20 @@ def outputCsv(filename: str, results : Dict):
             for i in range(0,8):
                 if r["notes"].get(i):
                     f.write(f", {r["notes"].get(i)}")
+                else:
+                    f.write(f",")
             f.write("\n")
+
+
 
 def main(cmd_args : List):
     #-----------------------
     #---- Parse arguments
     #-----------------------
     parser = argparse.ArgumentParser()
-    parser.add_argument("--path", type=str, required=True)
-    parser.add_argument("--file", type=str, required=True)
-    parser.add_argument("--team", type=int)
+    parser.add_argument("--path", type=str, required=True, help="Path to directory with results")
+    parser.add_argument("--output", type=str, required=True, help="Name of output file")
+    #parser.add_argument("--team", type=int)
     args = parser.parse_args(cmd_args)
 
     agg_results = []
@@ -48,15 +55,15 @@ def main(cmd_args : List):
                 if len(json_results["autopaths"])==0:
                     continue
 
-                init = filterEvents(json_results["autopaths"], 'init')[0]
-                pickups = filterEvents(json_results["autopaths"], 'pickup')
+                init = filterEvents(json_results["autopaths"], ['init'])[0]
+                pickups = filterEvents(json_results["autopaths"], ['pickup', 'failPickup'])
                 center = {n["noteId"]:n["time"] for n in pickups if n["noteId"] in range(3,8)}
                 
                 agg_results.append({"team": json_results["team"], 
                                     "pos":init["npos"], 
                                     "notes": center})
                 print(agg_results)
-                outputCsv(args.file, agg_results)
+                outputCsv(args.output, agg_results)
         else:
             logging.warning(f"Unrecognized naming convention. Ignoring file [{f}]")
             
