@@ -42,8 +42,8 @@ def add_auto():
 if __name__ == '__main__':
 
     parser = argparse.ArgumentParser()
-    parser.add_argument("-o", "--output", type=str, required=True)
+    parser.add_argument("-o", "--outdir", type=str, required=True)
     args = parser.parse_args(sys.argv[1:])
-    output_dir = Path(args.output)
+    output_dir = Path(args.outdir)
 
     app.run()
