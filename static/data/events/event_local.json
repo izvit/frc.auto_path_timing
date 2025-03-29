@@ -12,10 +12,9 @@
             1986
          ],
          "videos": [
-            "file:///C:/Users/USER-24-01/6328_workspace/data/2024necmp/test.mp4"
+            "https://youtube.com/v/VIm7Y7bHJq4"
          ]
       },
-
       "2": {
          "red": [
             6357,
@@ -28,7 +27,7 @@
             1986
          ],
          "videos": [
-            "images/match.mp4"
+            "file:///C:/videos/M1.mp4"
          ]
       }
   },

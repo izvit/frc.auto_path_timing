@@ -1,0 +1,78 @@
+{
+   "quals": {
+      "1": {
+         "red": [
+            4414,
+            3128,
+            33
+         ],
+         "blue": [
+            2046,
+            687,
+            5809
+         ],
+         "videos": [
+            "https://www.youtube.com/v/VIm7Y7bHJq4"
+         ]
+      },
+      "2": {
+         "red": [
+            88,
+            5895,
+            8013
+         ],
+         "blue": [
+            3310,
+            1325,
+            3546
+         ],
+         "videos": [
+            "https://www.youtube.com/v/cmcmUFfRcfo"
+         ]
+      },
+      "3": {
+         "red": [
+            6328,
+            2370,
+            4481
+         ],
+         "blue": [
+            3175,
+            8613,
+            2834
+         ],
+         "videos": [
+            "https://www.youtube.com/v/mPa7e4gyG0M"
+         ]
+      },
+      "4": {
+         "red": [
+            3357,
+            4909,
+            180
+         ],
+         "blue": [
+            5940,
+            195,
+            3006
+         ],
+         "videos": [
+            "https://www.youtube.com/v/fiqqZQYHFcQ"
+         ]
+      },
+      "5": {
+         "red": [
+            2046,
+            5809,
+            687
+         ],
+         "blue": [
+            3310,
+            1325,
+            3546
+         ],
+         "videos": []
+      }
+   },
+   "elims": {}
+}
