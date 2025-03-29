@@ -52,7 +52,7 @@
     //--------------
 	let matchInfo;
 	let eventName;
-    let matchNum
+    let matchId
 	let teams = new Set();
 
     onMount(() => {
@@ -152,14 +152,14 @@
 
 <ResultsForm bind:this={resultForm}
              bind:eventName={eventName} 
-             bind:matchNum={matchNum}
+             bind:matchId={matchId}
              bind:autoPaths={$autoEventList}
              on:submitted={() => {console.log("received submitted event"); resetState(false)}}/>
 
 <div class="flex justify-center w-full m-5 space-x-2">
 	<select class="p-2" bind:value={eventName} on:change={fetchEventData}>
         <option disabled selected value> -- select event -- </option>
-		<option value="2023hop">Houston (2023 Hopper)</option>
+		<option value="2024hop">Houston (2024 Hopper)</option>
         <option value="local">Local</option>
 	</select>
 	<!-- <select class="p-2" bind:value={teamNumber} >
@@ -197,8 +197,9 @@
                                 class = "text-blue-600 hover:text-blue-800 visited:text-purple-600"
                                 on:mousedown={()=> {
                                                         resetState(); 
+                                                        matchId="Q"+key
                                                         videoPlayer.loadRemoteVideo(v); 
-                                                        matchNum="Q"+key
+
                                                     }
                                                 }
                             >
